@@ -1,0 +1,14 @@
+.cart-items-table {
+  width: 500px;
+  border-collapse: collapse;
+}
+
+.cart-items-table th,
+.cart-items-table td {
+  padding: 5px;
+}
+
+.cart-items-table th {
+  text-align: left;
+  border-bottom: 1px solid #cccccc;
+}
