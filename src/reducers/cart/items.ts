@@ -1,11 +1,13 @@
-import { CartItem } from '../../types';
+import { CartItem, StoreType } from '../../types';
 import { SetCartItems, RemoveCartItem } from '../../actions/cart';
 import { SET_CART_ITEMS, REMOVE_CART_ITEM } from '../../constants/actions';
 
+export type CartItems = Array<CartItem>;
+
 export default function(
-  state: Array<CartItem> = [],
+  state: CartItems = [],
   action: SetCartItems | RemoveCartItem
-) {
+): CartItems {
   switch (action.type) {
     case SET_CART_ITEMS:
       return action.payload;

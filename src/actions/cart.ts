@@ -2,9 +2,11 @@ import { Dispatch, Action } from 'redux';
 import {
   SET_CART_ITEMS,
   SET_ERROR,
-  REMOVE_CART_ITEM
+  REMOVE_CART_ITEM,
+  SET_SORTING_FIELD,
+  TOGGLE_SORTING_ORDER
 } from '../constants/actions';
-import { CartItem } from '../types';
+import { CartItem, SortableFields } from '../types';
 
 export interface SetCartItems {
   type: SET_CART_ITEMS;
@@ -41,3 +43,21 @@ export const fetchItems = () => async (dispatch: Dispatch) => {
   // .catch(error => dispatch());
   dispatch(setCartItems(items));
 };
+
+export interface setSortingField {
+  type: SET_SORTING_FIELD;
+  payload: SortableFields;
+}
+
+export const changeSortingField = (field: SortableFields): setSortingField => ({
+  type: SET_SORTING_FIELD,
+  payload: field
+});
+
+export interface toggleSortingOrder {
+  type: TOGGLE_SORTING_ORDER;
+}
+
+export const toggleSortingOrder = () => ({
+  type: TOGGLE_SORTING_ORDER
+});

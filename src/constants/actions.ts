@@ -6,3 +6,9 @@ export type REMOVE_CART_ITEM = typeof REMOVE_CART_ITEM;
 
 export const SET_ERROR = 'SET_ERROR';
 export type SET_ERROR = typeof SET_ERROR;
+
+export const SET_SORTING_FIELD = 'SET_SORTING_FIELD';
+export type SET_SORTING_FIELD = typeof SET_SORTING_FIELD;
+
+export const TOGGLE_SORTING_ORDER = 'TOGGLE_SORTING_ORDER';
+export type TOGGLE_SORTING_ORDER = typeof TOGGLE_SORTING_ORDER;

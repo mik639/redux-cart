@@ -2,17 +2,17 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { CartItem, StoreType } from '../types';
 import { fetchItems } from '../actions/cart';
-import { ItemsList } from '../components/cart/itemsList';
+import ItemsList from '../components/cart/itemsList';
 
 interface PropsType {
-  loadItems: () => any;
+  loadItems: () => void;
   items: Array<CartItem>;
 }
 
 const Cart = ({ loadItems, items }: PropsType) => {
   return (
     <>
-      <ItemsList items={items} />
+      <ItemsList />
       <button type="button" onClick={loadItems}>
         Загрузить...
       </button>
