@@ -41,7 +41,9 @@ export const removeCartItem = (id: string): RemoveCartItem => ({
  * Load list of cart items from server
  */
 export const fetchItems = () => async (dispatch: Dispatch) => {
-  const items = await fetch('/items.json').then(res => res.json());
+  const items = await fetch('api/items.json', {
+    headers: { 'Content-Type': 'application/json' }
+  }).then(res => res.json());
   // .catch(error => dispatch());
   dispatch(setCartItems(items));
 };
