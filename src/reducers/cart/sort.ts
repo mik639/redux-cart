@@ -1,4 +1,4 @@
-import { setSortingField, toggleSortingOrder } from '../../actions/cart';
+import { SetSortingField, ToggleSortingOrder } from '../../actions/cart';
 import { SortableFields, SortOrder } from '../../types';
 import {
   SET_SORTING_FIELD,
@@ -17,7 +17,7 @@ const initialState: CartSort = {
 
 export default function(
   state: CartSort = initialState,
-  action: setSortingField | toggleSortingOrder
+  action: SetSortingField | ToggleSortingOrder
 ): CartSort {
   switch (action.type) {
     case SET_SORTING_FIELD:

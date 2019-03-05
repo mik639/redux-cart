@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QtySwitcher should renders correctly 1`] = `
+<div
+  className="qty-switcher"
+>
+  <button
+    onClick={[Function]}
+  >
+    -
+  </button>
+  <span
+    className="qty-switcher__value"
+  >
+    3
+  </span>
+  <button
+    onClick={[MockFunction]}
+  >
+    +
+  </button>
+</div>
+`;

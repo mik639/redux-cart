@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { CartItem, StoreType } from '../types';
 import { fetchItems } from '../actions/cart';
-import ItemsList from '../components/cart/itemsList';
+import ItemsList from '../components/itemsList/itemsList';
 
 interface PropsType {
   loadItems: () => void;

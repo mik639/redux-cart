@@ -4,7 +4,9 @@ import {
   SET_ERROR,
   REMOVE_CART_ITEM,
   SET_SORTING_FIELD,
-  TOGGLE_SORTING_ORDER
+  TOGGLE_SORTING_ORDER,
+  INCREASE_COUNT,
+  DECREASE_COUNT
 } from '../constants/actions';
 import { CartItem, SortableFields } from '../types';
 
@@ -44,20 +46,40 @@ export const fetchItems = () => async (dispatch: Dispatch) => {
   dispatch(setCartItems(items));
 };
 
-export interface setSortingField {
+export interface SetSortingField {
   type: SET_SORTING_FIELD;
   payload: SortableFields;
 }
 
-export const changeSortingField = (field: SortableFields): setSortingField => ({
+export const changeSortingField = (field: SortableFields): SetSortingField => ({
   type: SET_SORTING_FIELD,
   payload: field
 });
 
-export interface toggleSortingOrder {
+export interface ToggleSortingOrder {
   type: TOGGLE_SORTING_ORDER;
 }
 
-export const toggleSortingOrder = () => ({
+export const toggleSortingOrder = (): ToggleSortingOrder => ({
   type: TOGGLE_SORTING_ORDER
+});
+
+export interface IncreaseCount {
+  type: INCREASE_COUNT;
+  payload: string;
+}
+
+export const increaseCount = (id: string): IncreaseCount => ({
+  type: INCREASE_COUNT,
+  payload: id
+});
+
+export interface DecreaseCount {
+  type: DECREASE_COUNT;
+  payload: string;
+}
+
+export const decreaseCount = (id: string): DecreaseCount => ({
+  type: DECREASE_COUNT,
+  payload: id
 });
