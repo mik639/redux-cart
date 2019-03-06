@@ -1,13 +1,13 @@
 {
   "main.css": "/redux-cart/static/css/main.9c7757c5.chunk.css",
-  "main.js": "/redux-cart/static/js/main.0bc3f221.chunk.js",
-  "main.js.map": "/redux-cart/static/js/main.0bc3f221.chunk.js.map",
+  "main.js": "/redux-cart/static/js/main.0dc6f520.chunk.js",
+  "main.js.map": "/redux-cart/static/js/main.0dc6f520.chunk.js.map",
   "runtime~main.js": "/redux-cart/static/js/runtime~main.84d13f9d.js",
   "runtime~main.js.map": "/redux-cart/static/js/runtime~main.84d13f9d.js.map",
-  "static/js/2.93b1f555.chunk.js": "/redux-cart/static/js/2.93b1f555.chunk.js",
-  "static/js/2.93b1f555.chunk.js.map": "/redux-cart/static/js/2.93b1f555.chunk.js.map",
+  "static/js/2.6f7c9077.chunk.js": "/redux-cart/static/js/2.6f7c9077.chunk.js",
+  "static/js/2.6f7c9077.chunk.js.map": "/redux-cart/static/js/2.6f7c9077.chunk.js.map",
   "index.html": "/redux-cart/index.html",
-  "precache-manifest.32fef362a8e7f6842ec00adcdc273b50.js": "/redux-cart/precache-manifest.32fef362a8e7f6842ec00adcdc273b50.js",
+  "precache-manifest.6d259eeb2de4722afee59d825fd5f66f.js": "/redux-cart/precache-manifest.6d259eeb2de4722afee59d825fd5f66f.js",
   "service-worker.js": "/redux-cart/service-worker.js",
   "static/css/main.9c7757c5.chunk.css.map": "/redux-cart/static/css/main.9c7757c5.chunk.css.map"
 }
