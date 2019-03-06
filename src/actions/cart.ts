@@ -1,7 +1,6 @@
-import { Dispatch, Action } from 'redux';
+import { Dispatch } from 'redux';
 import {
   SET_CART_ITEMS,
-  SET_ERROR,
   REMOVE_CART_ITEM,
   SET_SORTING_FIELD,
   TOGGLE_SORTING_ORDER,
@@ -44,7 +43,7 @@ export const fetchItems = () => async (dispatch: Dispatch) => {
   const items = await fetch('api/items.json', {
     headers: { 'Content-Type': 'application/json' }
   }).then(res => res.json());
-  // .catch(error => dispatch());
+
   dispatch(setCartItems(items));
 };
 
@@ -53,6 +52,11 @@ export interface SetSortingField {
   payload: SortableFields;
 }
 
+/**
+ * Change "sort by" field for cart items
+ * 
+ * @param {SortableFields} field - field name
+ */
 export const changeSortingField = (field: SortableFields): SetSortingField => ({
   type: SET_SORTING_FIELD,
   payload: field
@@ -62,6 +66,9 @@ export interface ToggleSortingOrder {
   type: TOGGLE_SORTING_ORDER;
 }
 
+/**
+ * Change sort order to opposite
+ */
 export const toggleSortingOrder = (): ToggleSortingOrder => ({
   type: TOGGLE_SORTING_ORDER
 });
@@ -71,6 +78,11 @@ export interface IncreaseCount {
   payload: string;
 }
 
+/**
+ * Increase count of given item
+ * 
+ * @param {string} id - cart item id
+ */
 export const increaseCount = (id: string): IncreaseCount => ({
   type: INCREASE_COUNT,
   payload: id
@@ -81,6 +93,11 @@ export interface DecreaseCount {
   payload: string;
 }
 
+/**
+ * Decrease count of given item
+ * 
+ * @param {string} id - cart item id
+ */
 export const decreaseCount = (id: string): DecreaseCount => ({
   type: DECREASE_COUNT,
   payload: id

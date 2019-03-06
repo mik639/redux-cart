@@ -4,9 +4,6 @@ export type SET_CART_ITEMS = typeof SET_CART_ITEMS;
 export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM';
 export type REMOVE_CART_ITEM = typeof REMOVE_CART_ITEM;
 
-export const SET_ERROR = 'SET_ERROR';
-export type SET_ERROR = typeof SET_ERROR;
-
 export const SET_SORTING_FIELD = 'SET_SORTING_FIELD';
 export type SET_SORTING_FIELD = typeof SET_SORTING_FIELD;
 
@@ -19,5 +16,3 @@ export type INCREASE_COUNT = typeof INCREASE_COUNT;
 export const DECREASE_COUNT = 'DECREASE_COUNT';
 export type DECREASE_COUNT = typeof DECREASE_COUNT;
 
-export const ADD_CART_ITEM = 'ADD_CART_ITEM';
-export type ADD_CART_ITEM = typeof ADD_CART_ITEM;

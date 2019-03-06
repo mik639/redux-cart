@@ -21,7 +21,7 @@ class ItemsList extends React.PureComponent<PropsType> {
    * Sort items by given field, if items already sorted
    * changing sort order
    *
-   * @param field {SortableFields} field that should be used for sorting
+   * @param {SortableFields} field field that should be used for sorting
    */
   sort = (field: SortableFields) => {
     const {
@@ -39,10 +39,10 @@ class ItemsList extends React.PureComponent<PropsType> {
 
   /**
    * Return css classes for columns headers
-   * 
-   * @param field {SortableFields} table column name
+   *
+   * @param {SortableFields} field table column name
    */
-  getColumnClassnames = (field: SortableFields) => {
+  getColumnClassnames = (field: SortableFields): string => {
     const {
       sort: { sortBy, order }
     } = this.props;
@@ -55,7 +55,7 @@ class ItemsList extends React.PureComponent<PropsType> {
   };
 
   render() {
-    const { items, sort } = this.props;
+    const { items } = this.props;
 
     return (
       <table className="cart-items-table">
