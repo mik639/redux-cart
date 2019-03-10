@@ -3,27 +3,30 @@ import { connect } from 'react-redux';
 import { CartItem, StoreType } from '../types';
 import { fetchItems } from '../actions/cart';
 import ItemsList from '../components/itemsList/itemsList';
+import Form from '../components/form/form';
 import './cart.css';
 
 interface PropsType {
   loadItems: () => void;
-  items: Array<CartItem>;
 }
 
-const Cart = ({ loadItems, items }: PropsType) => {
+const Cart = ({ loadItems }: PropsType) => {
   return (
-    <>
-      <ItemsList />
-      <button type="button" onClick={loadItems}>
-        Загрузить...
-      </button>
-    </>
+    <div className="cart">
+      <div>
+        <ItemsList />
+      </div>
+      <div className="cart-actions">
+        <button type="button" onClick={loadItems}>
+          Загрузить корзину с сервера...
+        </button>
+        <Form />
+      </div>
+    </div>
   );
 };
 
-const mapStateToProps = (state: StoreType) => ({ items: state.cart.items });
-
 export default connect(
-  mapStateToProps,
+  null,
   { loadItems: fetchItems }
 )(Cart);

@@ -1,0 +1,10 @@
+.product-form {
+  width: 400px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.product-form input {
+  display: block;
+  margin: 5px 0 20px;
+}

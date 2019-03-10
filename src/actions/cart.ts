@@ -1,13 +1,16 @@
 import { Dispatch } from 'redux';
+import nanoid from 'nanoid';
 import {
   SET_CART_ITEMS,
   REMOVE_CART_ITEM,
   SET_SORTING_FIELD,
   TOGGLE_SORTING_ORDER,
   INCREASE_COUNT,
-  DECREASE_COUNT
+  DECREASE_COUNT,
+  ADD_CART_ITEM,
+  CartItem,
+  SortableFields
 } from '../types';
-import { CartItem, SortableFields } from '../types';
 
 export interface SetCartItems {
   type: SET_CART_ITEMS;
@@ -101,4 +104,23 @@ export interface DecreaseCount {
 export const decreaseCount = (id: string): DecreaseCount => ({
   type: DECREASE_COUNT,
   payload: id
+});
+
+export interface AddCartItem {
+  type: ADD_CART_ITEM;
+  payload: CartItem;
+}
+
+export const addCartItem = (
+  name: string,
+  price: number,
+  count: number = 1
+): AddCartItem => ({
+  type: ADD_CART_ITEM,
+  payload: {
+    id: nanoid(),
+    name,
+    price,
+    count
+  }
 });

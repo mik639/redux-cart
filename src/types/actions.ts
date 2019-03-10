@@ -16,3 +16,5 @@ export type INCREASE_COUNT = typeof INCREASE_COUNT;
 export const DECREASE_COUNT = 'DECREASE_COUNT';
 export type DECREASE_COUNT = typeof DECREASE_COUNT;
 
+export const ADD_CART_ITEM = 'ADD_CART_ITEM';
+export type ADD_CART_ITEM = typeof ADD_CART_ITEM;
