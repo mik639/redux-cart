@@ -18,3 +18,12 @@ export interface StoreType {
     sort: CartSort;
   };
 }
+
+export {
+  SET_CART_ITEMS,
+  REMOVE_CART_ITEM,
+  SET_SORTING_FIELD,
+  TOGGLE_SORTING_ORDER,
+  INCREASE_COUNT,
+  DECREASE_COUNT
+} from './actions';

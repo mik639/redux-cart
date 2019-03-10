@@ -1,9 +1,10 @@
 import { SetSortingField, ToggleSortingOrder } from '../../actions/cart';
-import { SortableFields, SortOrder } from '../../types';
 import {
+  SortableFields,
+  SortOrder,
   SET_SORTING_FIELD,
   TOGGLE_SORTING_ORDER
-} from '../../constants/actions';
+} from '../../types';
 
 export interface CartSort {
   sortBy: SortableFields;

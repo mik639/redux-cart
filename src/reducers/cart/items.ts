@@ -1,4 +1,3 @@
-import { CartItem } from '../../types';
 import {
   SetCartItems,
   RemoveCartItem,
@@ -6,11 +5,12 @@ import {
   DecreaseCount
 } from '../../actions/cart';
 import {
+  CartItem,
   SET_CART_ITEMS,
   REMOVE_CART_ITEM,
   INCREASE_COUNT,
   DECREASE_COUNT
-} from '../../constants/actions';
+} from '../../types';
 
 export type CartItems = Array<CartItem>;
 

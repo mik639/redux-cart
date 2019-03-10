@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { CartItem, StoreType } from '../types';
 import { fetchItems } from '../actions/cart';
 import ItemsList from '../components/itemsList/itemsList';
+import './cart.css';
 
 interface PropsType {
   loadItems: () => void;

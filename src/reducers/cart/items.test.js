@@ -5,7 +5,7 @@ import {
   REMOVE_CART_ITEM,
   INCREASE_COUNT,
   DECREASE_COUNT
-} from '../../constants/actions';
+} from '../../types/actions';
 
 describe('items reducer', () => {
   let items;

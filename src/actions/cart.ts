@@ -6,7 +6,7 @@ import {
   TOGGLE_SORTING_ORDER,
   INCREASE_COUNT,
   DECREASE_COUNT
-} from '../constants/actions';
+} from '../types';
 import { CartItem, SortableFields } from '../types';
 
 export interface SetCartItems {
@@ -54,7 +54,7 @@ export interface SetSortingField {
 
 /**
  * Change "sort by" field for cart items
- * 
+ *
  * @param {SortableFields} field - field name
  */
 export const changeSortingField = (field: SortableFields): SetSortingField => ({
@@ -80,7 +80,7 @@ export interface IncreaseCount {
 
 /**
  * Increase count of given item
- * 
+ *
  * @param {string} id - cart item id
  */
 export const increaseCount = (id: string): IncreaseCount => ({
@@ -95,7 +95,7 @@ export interface DecreaseCount {
 
 /**
  * Decrease count of given item
- * 
+ *
  * @param {string} id - cart item id
  */
 export const decreaseCount = (id: string): DecreaseCount => ({
